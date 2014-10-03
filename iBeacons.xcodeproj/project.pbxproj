@@ -8,11 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		B36C411A19DBF02E00F25768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C411919DBF02E00F25768 /* AppDelegate.swift */; };
-		B36C411C19DBF02E00F25768 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C411B19DBF02E00F25768 /* ViewController.swift */; };
 		B36C411F19DBF02E00F25768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36C411D19DBF02E00F25768 /* Main.storyboard */; };
 		B36C412119DBF02E00F25768 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36C412019DBF02E00F25768 /* Images.xcassets */; };
 		B36C412419DBF02E00F25768 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B36C412219DBF02E00F25768 /* LaunchScreen.xib */; };
 		B36C413019DBF02E00F25768 /* iBeaconsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C412F19DBF02E00F25768 /* iBeaconsTests.swift */; };
+		B36C413A19DBF0B300F25768 /* MainScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C413919DBF0B300F25768 /* MainScreen.swift */; };
+		B36C413C19DBF19600F25768 /* TestScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C413B19DBF19600F25768 /* TestScan.swift */; };
+		B36C413E19DBFE8600F25768 /* TestScanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C413D19DBFE8600F25768 /* TestScanCell.swift */; };
+		B36C414019DC22F200F25768 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36C413F19DC22F200F25768 /* CoreLocation.framework */; };
+		B3D5BC3919DE845B009FB8AC /* ScanningBeacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D5BC3819DE845B009FB8AC /* ScanningBeacons.swift */; };
+		B3D5BC3B19DEA29B009FB8AC /* spinner.gif in Resources */ = {isa = PBXBuildFile; fileRef = B3D5BC3A19DEA29B009FB8AC /* spinner.gif */; };
+		B3DC2BDC19DC35480057072B /* ListBeaconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BDB19DC35480057072B /* ListBeaconCell.swift */; };
+		B3DC2BE019DC386C0057072B /* ListBeacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BDF19DC386C0057072B /* ListBeacons.swift */; };
+		B3DC2BE219DC3E870057072B /* AddBeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BE119DC3E870057072B /* AddBeacon.swift */; };
+		B3DC2BE619DC4A520057072B /* ScannedBeaconsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BE519DC4A520057072B /* ScannedBeaconsCell.swift */; };
+		B3DC2BE819DD39C00057072B /* ScannedBeacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BE719DD39C00057072B /* ScannedBeacons.swift */; };
+		B3DC2BEA19DD59500057072B /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B3DC2BE919DD59500057072B /* libsqlite3.dylib */; };
+		B3DC2BF719DD6D410057072B /* DatabaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BF619DD6D410057072B /* DatabaseController.m */; };
+		B3DC2BFA19DD6ED10057072B /* SQLiteUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BF919DD6ED10057072B /* SQLiteUtils.m */; };
+		B3DC2BFE19DD791C0057072B /* ScanningBeaconsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BFD19DD791C0057072B /* ScanningBeaconsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +42,31 @@
 /* Begin PBXFileReference section */
 		B36C411419DBF02E00F25768 /* iBeacons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeacons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36C411819DBF02E00F25768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B36C411919DBF02E00F25768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B36C411B19DBF02E00F25768 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B36C411919DBF02E00F25768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
 		B36C411E19DBF02E00F25768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B36C412019DBF02E00F25768 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		B36C412319DBF02E00F25768 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		B36C412919DBF02E00F25768 /* iBeaconsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iBeaconsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36C412E19DBF02E00F25768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B36C412F19DBF02E00F25768 /* iBeaconsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iBeaconsTests.swift; sourceTree = "<group>"; };
+		B36C413919DBF0B300F25768 /* MainScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreen.swift; sourceTree = "<group>"; };
+		B36C413B19DBF19600F25768 /* TestScan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScan.swift; sourceTree = "<group>"; };
+		B36C413D19DBFE8600F25768 /* TestScanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScanCell.swift; sourceTree = "<group>"; };
+		B36C413F19DC22F200F25768 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B3D5BC3819DE845B009FB8AC /* ScanningBeacons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanningBeacons.swift; sourceTree = "<group>"; };
+		B3D5BC3A19DEA29B009FB8AC /* spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spinner.gif; sourceTree = "<group>"; };
+		B3DC2BDB19DC35480057072B /* ListBeaconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBeaconCell.swift; sourceTree = "<group>"; };
+		B3DC2BDF19DC386C0057072B /* ListBeacons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBeacons.swift; sourceTree = "<group>"; };
+		B3DC2BE119DC3E870057072B /* AddBeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBeacon.swift; sourceTree = "<group>"; };
+		B3DC2BE519DC4A520057072B /* ScannedBeaconsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedBeaconsCell.swift; sourceTree = "<group>"; };
+		B3DC2BE719DD39C00057072B /* ScannedBeacons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScannedBeacons.swift; sourceTree = "<group>"; };
+		B3DC2BE919DD59500057072B /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		B3DC2BEB19DD5EDF0057072B /* iBeacons-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iBeacons-Bridging-Header.h"; sourceTree = "<group>"; };
+		B3DC2BF519DD6D410057072B /* DatabaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DatabaseController.h; sourceTree = "<group>"; };
+		B3DC2BF619DD6D410057072B /* DatabaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DatabaseController.m; sourceTree = "<group>"; };
+		B3DC2BF819DD6ED10057072B /* SQLiteUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteUtils.h; sourceTree = "<group>"; };
+		B3DC2BF919DD6ED10057072B /* SQLiteUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteUtils.m; sourceTree = "<group>"; };
+		B3DC2BFD19DD791C0057072B /* ScanningBeaconsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanningBeaconsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +74,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3DC2BEA19DD59500057072B /* libsqlite3.dylib in Frameworks */,
+				B36C414019DC22F200F25768 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,9 +92,12 @@
 		B36C410B19DBF02E00F25768 = {
 			isa = PBXGroup;
 			children = (
+				B3DC2BE919DD59500057072B /* libsqlite3.dylib */,
+				B36C413F19DC22F200F25768 /* CoreLocation.framework */,
 				B36C411619DBF02E00F25768 /* iBeacons */,
 				B36C412C19DBF02E00F25768 /* iBeaconsTests */,
 				B36C411519DBF02E00F25768 /* Products */,
+				B3DC2BEB19DD5EDF0057072B /* iBeacons-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -77,10 +113,24 @@
 		B36C411619DBF02E00F25768 /* iBeacons */ = {
 			isa = PBXGroup;
 			children = (
+				B3DC2BF519DD6D410057072B /* DatabaseController.h */,
+				B3DC2BF619DD6D410057072B /* DatabaseController.m */,
+				B3DC2BF819DD6ED10057072B /* SQLiteUtils.h */,
+				B3DC2BF919DD6ED10057072B /* SQLiteUtils.m */,
 				B36C411919DBF02E00F25768 /* AppDelegate.swift */,
-				B36C411B19DBF02E00F25768 /* ViewController.swift */,
+				B36C413919DBF0B300F25768 /* MainScreen.swift */,
 				B36C411D19DBF02E00F25768 /* Main.storyboard */,
+				B36C413D19DBFE8600F25768 /* TestScanCell.swift */,
+				B36C413B19DBF19600F25768 /* TestScan.swift */,
+				B3DC2BE119DC3E870057072B /* AddBeacon.swift */,
+				B3DC2BDB19DC35480057072B /* ListBeaconCell.swift */,
+				B3DC2BDF19DC386C0057072B /* ListBeacons.swift */,
+				B3DC2BE519DC4A520057072B /* ScannedBeaconsCell.swift */,
+				B3DC2BE719DD39C00057072B /* ScannedBeacons.swift */,
+				B3DC2BFD19DD791C0057072B /* ScanningBeaconsCell.swift */,
+				B3D5BC3819DE845B009FB8AC /* ScanningBeacons.swift */,
 				B36C412019DBF02E00F25768 /* Images.xcassets */,
+				B3D5BC3A19DEA29B009FB8AC /* spinner.gif */,
 				B36C412219DBF02E00F25768 /* LaunchScreen.xib */,
 				B36C411719DBF02E00F25768 /* Supporting Files */,
 			);
@@ -161,6 +211,11 @@
 				TargetAttributes = {
 					B36C411319DBF02E00F25768 = {
 						CreatedOnToolsVersion = 6.0.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					B36C412819DBF02E00F25768 = {
 						CreatedOnToolsVersion = 6.0.1;
@@ -194,6 +249,7 @@
 			files = (
 				B36C411F19DBF02E00F25768 /* Main.storyboard in Resources */,
 				B36C412419DBF02E00F25768 /* LaunchScreen.xib in Resources */,
+				B3D5BC3B19DEA29B009FB8AC /* spinner.gif in Resources */,
 				B36C412119DBF02E00F25768 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,7 +268,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B36C411C19DBF02E00F25768 /* ViewController.swift in Sources */,
+				B3DC2BE819DD39C00057072B /* ScannedBeacons.swift in Sources */,
+				B3DC2BE619DC4A520057072B /* ScannedBeaconsCell.swift in Sources */,
+				B3DC2BF719DD6D410057072B /* DatabaseController.m in Sources */,
+				B3DC2BFE19DD791C0057072B /* ScanningBeaconsCell.swift in Sources */,
+				B3DC2BE219DC3E870057072B /* AddBeacon.swift in Sources */,
+				B36C413A19DBF0B300F25768 /* MainScreen.swift in Sources */,
+				B3D5BC3919DE845B009FB8AC /* ScanningBeacons.swift in Sources */,
+				B3DC2BE019DC386C0057072B /* ListBeacons.swift in Sources */,
+				B3DC2BDC19DC35480057072B /* ListBeaconCell.swift in Sources */,
+				B36C413C19DBF19600F25768 /* TestScan.swift in Sources */,
+				B3DC2BFA19DD6ED10057072B /* SQLiteUtils.m in Sources */,
+				B36C413E19DBFE8600F25768 /* TestScanCell.swift in Sources */,
 				B36C411A19DBF02E00F25768 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,9 +403,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iBeacons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a8b4d318-5704-4b97-83a3-666ee1a8e141";
+				SWIFT_OBJC_BRIDGING_HEADER = "iBeacons-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -346,9 +417,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = iBeacons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "a8b4d318-5704-4b97-83a3-666ee1a8e141";
+				SWIFT_OBJC_BRIDGING_HEADER = "iBeacons-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -405,6 +479,7 @@
 				B36C413519DBF02E00F25768 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B36C413619DBF02E00F25768 /* Build configuration list for PBXNativeTarget "iBeaconsTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +488,7 @@
 				B36C413819DBF02E00F25768 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -225,6 +225,20 @@
                                     <action selector="buttonStartPressed:" destination="JsE-Uv-iFP" eventType="touchUpInside" id="tuB-55-QWe"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Meu-Sf-460">
+                                <rect key="frame" x="34" y="124" width="133" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="userDoneEnteringText" destination="JsE-Uv-iFP" eventType="editingDidEndOnExit" id="Orn-Ql-L64"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Major:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="76O-Wx-TBG">
+                                <rect key="frame" x="34" y="95" width="49" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -232,7 +246,9 @@
                     <connections>
                         <outlet property="buttonStart" destination="tHW-tA-8Yj" id="JA2-yr-9Im"/>
                         <outlet property="labelLog" destination="pB2-Bf-jOy" id="vhu-QQ-gof"/>
+                        <outlet property="labelMajor" destination="76O-Wx-TBG" id="rsY-LQ-LgF"/>
                         <outlet property="tableView" destination="dA7-CI-o5k" id="7Ig-tl-LlD"/>
+                        <outlet property="textfieldMajor" destination="Meu-Sf-460" id="ddx-Bw-9Ar"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G6Q-XP-1NS" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -13,8 +13,9 @@ class ListBeacons: UIViewController {
     @IBOutlet var labelLog: UILabel!
     @IBOutlet var switchLog: UISwitch!
     @IBOutlet var tableView: UITableView!
-    var arrayUUID: [String] = []
-    var arrayNaam: [String] = []
+    var arrayUUID: [String] = ["B9407F30-F5F8-466E-AFF9-25556B57FE6D",
+                               "F7826DA6-4FA2-4E98-8024-BC5B71E0893E"]
+    var arrayNaam: [String] = ["Estimote", "Kontakt"]
     
     
     @IBAction func unwindToSegue (segue : UIStoryboardSegue)
@@ -66,7 +67,7 @@ class ListBeacons: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        load()
+        //load()
     }
     
     func deleteDatabase(){

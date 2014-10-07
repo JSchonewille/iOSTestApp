@@ -17,7 +17,9 @@ class ScanningBeacons: UIViewController, CLLocationManagerDelegate, MFMailCompos
     var startTime = NSTimeInterval()
     var timer : NSTimer = NSTimer()
     @IBOutlet var labelLog: UILabel!
-
+    @IBOutlet var textfieldMajor: UITextField!
+    var majorInput : CLBeaconMajorValue = 0
+    @IBOutlet var labelMajor: UILabel!
     
     
     @IBAction func buttonStartPressed(sender: AnyObject)
@@ -34,7 +36,27 @@ class ScanningBeacons: UIViewController, CLLocationManagerDelegate, MFMailCompos
         }
     }
     
-    
+    @IBAction func userDoneEnteringText()
+    {
+        var input = textfieldMajor.text.toInt()
+        if (( input) != nil)
+        {
+            let major = textfieldMajor.text.toInt()!
+            let nn = UInt16(major)
+            self.majorInput = nn
+            self.initiateBeaconSetup()
+            tableView.reloadData()
+        }
+        else
+        {
+            let major = 0
+            let nn = UInt16(major)
+            self.majorInput = nn
+            self.initiateBeaconSetup()
+            tableView.reloadData()
+        }
+    }
+
     
     
     func popup()
@@ -151,25 +173,38 @@ class ScanningBeacons: UIViewController, CLLocationManagerDelegate, MFMailCompos
     
     override func viewDidLoad() {
             super.viewDidLoad()
-            let uuidString = uuid
-            let beaconIdentifier = "iBeaconModules.us"
-            let beaconUUID:NSUUID = NSUUID(UUIDString: uuidString)
-            let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID,
-                identifier: beaconIdentifier)
-            locationManager = CLLocationManager()
-            
-            if(locationManager!.respondsToSelector("requestAlwaysAuthorization")) {
-                locationManager!.requestAlwaysAuthorization()
-            }
-            
-            locationManager!.delegate = self
-            locationManager!.pausesLocationUpdatesAutomatically = false
-            
-            locationManager!.startMonitoringForRegion(beaconRegion)
-            locationManager!.startRangingBeaconsInRegion(beaconRegion)
-            locationManager!.startUpdatingLocation()
+            self.initiateBeaconSetup()
+        }
+    
+    func initiateBeaconSetup(){
+        let uuidString = uuid
+        let beaconIdentifier = "iBeaconModules.us"
+        let beaconUUID:NSUUID = NSUUID(UUIDString: uuidString)
+        //let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID,
+        //   identifier: beaconIdentifier)
+        
+        var beaconRegion: CLBeaconRegion = CLBeaconRegion()
+        if (majorInput == 0)
+        {
+            beaconRegion = CLBeaconRegion (proximityUUID: beaconUUID, identifier: beaconIdentifier)
+        }
+        else{
+            beaconRegion = CLBeaconRegion (proximityUUID: beaconUUID, major: majorInput, identifier: beaconIdentifier)
+        }
+        locationManager = CLLocationManager()
+        
+        if(locationManager!.respondsToSelector("requestAlwaysAuthorization")) {
+            locationManager!.requestAlwaysAuthorization()
         }
         
+        locationManager!.delegate = self
+        locationManager!.pausesLocationUpdatesAutomatically = false
+        
+        locationManager!.startMonitoringForRegion(beaconRegion)
+        locationManager!.startRangingBeaconsInRegion(beaconRegion)
+        locationManager!.startUpdatingLocation()
+    }
+    
     override func didReceiveMemoryWarning() {
             super.didReceiveMemoryWarning()
             // Dispose of any resources that can be recreated.

@@ -16,6 +16,10 @@
 		B36C413C19DBF19600F25768 /* TestScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C413B19DBF19600F25768 /* TestScan.swift */; };
 		B36C413E19DBFE8600F25768 /* TestScanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C413D19DBFE8600F25768 /* TestScanCell.swift */; };
 		B36C414019DC22F200F25768 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B36C413F19DC22F200F25768 /* CoreLocation.framework */; };
+		B39242C719E3D98900A2F9EE /* iBeacon-is-Big-with-Mobile-Marketers.png in Resources */ = {isa = PBXBuildFile; fileRef = B39242C619E3D98900A2F9EE /* iBeacon-is-Big-with-Mobile-Marketers.png */; };
+		B39242CF19E3DB3D00A2F9EE /* Icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = B39242CC19E3DB3D00A2F9EE /* Icon29.png */; };
+		B39242D019E3DB3D00A2F9EE /* Icon40.png in Resources */ = {isa = PBXBuildFile; fileRef = B39242CD19E3DB3D00A2F9EE /* Icon40.png */; };
+		B39242D119E3DB3D00A2F9EE /* Icon60.png in Resources */ = {isa = PBXBuildFile; fileRef = B39242CE19E3DB3D00A2F9EE /* Icon60.png */; };
 		B3D5BC3919DE845B009FB8AC /* ScanningBeacons.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3D5BC3819DE845B009FB8AC /* ScanningBeacons.swift */; };
 		B3D5BC3B19DEA29B009FB8AC /* spinner.gif in Resources */ = {isa = PBXBuildFile; fileRef = B3D5BC3A19DEA29B009FB8AC /* spinner.gif */; };
 		B3DC2BDC19DC35480057072B /* ListBeaconCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BDB19DC35480057072B /* ListBeaconCell.swift */; };
@@ -53,6 +57,10 @@
 		B36C413B19DBF19600F25768 /* TestScan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScan.swift; sourceTree = "<group>"; };
 		B36C413D19DBFE8600F25768 /* TestScanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestScanCell.swift; sourceTree = "<group>"; };
 		B36C413F19DC22F200F25768 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		B39242C619E3D98900A2F9EE /* iBeacon-is-Big-with-Mobile-Marketers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "iBeacon-is-Big-with-Mobile-Marketers.png"; sourceTree = "<group>"; };
+		B39242CC19E3DB3D00A2F9EE /* Icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon29.png; sourceTree = "<group>"; };
+		B39242CD19E3DB3D00A2F9EE /* Icon40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon40.png; sourceTree = "<group>"; };
+		B39242CE19E3DB3D00A2F9EE /* Icon60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon60.png; sourceTree = "<group>"; };
 		B3D5BC3819DE845B009FB8AC /* ScanningBeacons.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanningBeacons.swift; sourceTree = "<group>"; };
 		B3D5BC3A19DEA29B009FB8AC /* spinner.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = spinner.gif; sourceTree = "<group>"; };
 		B3DC2BDB19DC35480057072B /* ListBeaconCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListBeaconCell.swift; sourceTree = "<group>"; };
@@ -140,6 +148,10 @@
 		B36C411719DBF02E00F25768 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B39242CC19E3DB3D00A2F9EE /* Icon29.png */,
+				B39242CD19E3DB3D00A2F9EE /* Icon40.png */,
+				B39242CE19E3DB3D00A2F9EE /* Icon60.png */,
+				B39242C619E3D98900A2F9EE /* iBeacon-is-Big-with-Mobile-Marketers.png */,
 				B36C411819DBF02E00F25768 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -249,6 +261,10 @@
 			files = (
 				B36C411F19DBF02E00F25768 /* Main.storyboard in Resources */,
 				B36C412419DBF02E00F25768 /* LaunchScreen.xib in Resources */,
+				B39242C719E3D98900A2F9EE /* iBeacon-is-Big-with-Mobile-Marketers.png in Resources */,
+				B39242D019E3DB3D00A2F9EE /* Icon40.png in Resources */,
+				B39242D119E3DB3D00A2F9EE /* Icon60.png in Resources */,
+				B39242CF19E3DB3D00A2F9EE /* Icon29.png in Resources */,
 				B3D5BC3B19DEA29B009FB8AC /* spinner.gif in Resources */,
 				B36C412119DBF02E00F25768 /* Images.xcassets in Resources */,
 			);

@@ -14,15 +14,24 @@ class ScanningBeacons: UIViewController, CLLocationManagerDelegate, MFMailCompos
 
     @IBOutlet var buttonStart: UIButton!
     @IBOutlet var tableView: UITableView!
-    @IBOutlet var labelTimer: UILabel!
+    var startTime = NSTimeInterval()
+    var timer : NSTimer = NSTimer()
+    @IBOutlet var labelLog: UILabel!
+
     
     
     @IBAction func buttonStartPressed(sender: AnyObject)
     {
+        date = NSDate()
         csvFile = ""
         areWeLogging = true
         popup()
-        
+        if !timer.valid
+        {
+            let aSelector : Selector = "updateTime"
+            timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
+            startTime = NSDate.timeIntervalSinceReferenceDate()
+        }
     }
     
     
@@ -47,8 +56,40 @@ class ScanningBeacons: UIViewController, CLLocationManagerDelegate, MFMailCompos
         
         }))
         presentViewController(refreshAlert, animated: true, completion: nil)
-        
+        timer.invalidate()
     }
+    
+    func updateTime() -> String {
+        let timePassed_ms = date.timeIntervalSinceNow * -1000.0;
+        let rounding = Int(timePassed_ms)
+        /*
+        var currentTime = NSDate.timeIntervalSinceReferenceDate()
+        
+        //Find the difference between current time and start time.
+        var elapsedTime: NSTimeInterval = currentTime - startTime
+        
+        //calculate the minutes in elapsed time.
+        let minutes = UInt8(elapsedTime / 60.0)
+        elapsedTime -= (NSTimeInterval(minutes) * 60)
+        //calculate the seconds in elapsed time.
+        let seconds = UInt8(elapsedTime)
+        elapsedTime -= NSTimeInterval(seconds)
+        
+        //find out the fraction of milliseconds to be displayed.
+        let fraction = UInt8(elapsedTime * 100)
+        
+        //add the leading zero for minutes, seconds and millseconds and store them as string constants
+        let strMinutes = minutes > 9 ? String(minutes):"0" + String(minutes)
+        let strSeconds = seconds > 9 ? String(seconds):"0" + String(seconds)
+        let strFraction = fraction > 9 ? String(fraction):"0" + String(fraction)
+        
+        //concatenate minuets, seconds and milliseconds as assign it to the UILabel
+        return "\(strMinutes):\(strSeconds):\(strFraction)"
+        */
+        let time = "\(rounding)"
+        return time
+    }
+
     
     
     
@@ -106,6 +147,7 @@ class ScanningBeacons: UIViewController, CLLocationManagerDelegate, MFMailCompos
     var lastProximity: CLProximity?
     var areWeLogging = false
     var csvFile = ""
+    var date = NSDate()
     
     override func viewDidLoad() {
             super.viewDidLoad()
@@ -287,14 +329,16 @@ class ScanningBeacons: UIViewController, CLLocationManagerDelegate, MFMailCompos
             let stringRSSI = String(beacon.rssi as Int)
         
         
+        
             if areWeLogging
             {
+                let time = updateTime()
                 if csvFile.isEmpty
                 {
-                    csvFile = "Major, Minor, Proximity, RSSI \n"
+                    csvFile = "Major, Minor, Proximity, Tijd, RSSI \n"
                 }
                 csvFile +=
-                    stringMajor + ", " + stringMinor + ", " + stringProximity + ", " + stringRSSI + "\n"
+                    stringMajor + ", " + stringMinor + ", " + stringProximity + ", " + time + ", " + stringRSSI + "\n"
             }
             
             return cell

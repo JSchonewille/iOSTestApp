@@ -163,7 +163,7 @@ class ScanningBeacons: UIViewController, CLLocationManagerDelegate, MFMailCompos
     
     
     
-    var uuid = ""
+    var uuid : NSUUID = NSUUID()
     var beacons: [CLBeacon]?
     var locationManager: CLLocationManager?
     var lastProximity: CLProximity?
@@ -179,7 +179,7 @@ class ScanningBeacons: UIViewController, CLLocationManagerDelegate, MFMailCompos
     func initiateBeaconSetup(){
         let uuidString = uuid
         let beaconIdentifier = "iBeaconModules.us"
-        let beaconUUID:NSUUID = NSUUID(UUIDString: uuidString)
+        let beaconUUID:NSUUID = uuid
         //let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID,
         //   identifier: beaconIdentifier)
         

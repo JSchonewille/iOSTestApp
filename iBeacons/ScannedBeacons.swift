@@ -22,7 +22,7 @@ class ScannedBeacons: UITableViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         let uuidString = uuid
         let beaconIdentifier = "iBeaconModules.us"
-        let beaconUUID:NSUUID = NSUUID(UUIDString: uuidString)
+        let beaconUUID:NSUUID = NSUUID(UUIDBytes: uuidString)
         let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID,
             identifier: beaconIdentifier)
         

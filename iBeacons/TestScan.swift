@@ -83,7 +83,7 @@ class TestScan: UIViewController, UITableViewDataSource, UITableViewDelegate, CL
         
         let uuidString = "EBEFD083-70A2-47C8-9837-E7B5634DF524"
         let beaconIdentifier = "iBeaconModules.us"
-        let beaconUUID:NSUUID = NSUUID(UUIDString: uuidString)
+        let beaconUUID:NSUUID = NSUUID(UUIDBytes: uuidString)
         let beaconRegion:CLBeaconRegion = CLBeaconRegion(proximityUUID: beaconUUID,
             identifier: beaconIdentifier)
         

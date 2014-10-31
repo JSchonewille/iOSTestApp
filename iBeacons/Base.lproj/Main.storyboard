@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eIK-2c-JmQ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eIK-2c-JmQ">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
         <!--Main Screen-->
@@ -22,7 +22,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="O56-MJ-hXe" kind="push" id="U7o-ax-DAz"/>
+                                    <segue destination="O56-MJ-hXe" kind="show" id="NBL-gx-Klu"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkC-hT-2tY">
@@ -31,7 +31,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="xPG-1Y-Ngb" kind="push" id="EYC-Ai-Mmv"/>
+                                    <segue destination="xPG-1Y-Ngb" kind="show" id="wGZ-e5-zB2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -108,7 +108,7 @@
                     <navigationItem key="navigationItem" title="List Beacons" id="C5n-AC-0lR">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="YOx-j0-zRK">
                             <connections>
-                                <segue destination="hRB-gM-OLx" kind="push" identifier="AddBeacon" id="5lL-Dc-whJ"/>
+                                <segue destination="hRB-gM-OLx" kind="show" identifier="AddBeacon" id="5lL-Dc-whJ"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

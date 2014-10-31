@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B350C6D419E7FBD500EF9966 /* Ibeacon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B350C6D319E7FBD500EF9966 /* Ibeacon.swift */; };
 		B36C411A19DBF02E00F25768 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B36C411919DBF02E00F25768 /* AppDelegate.swift */; };
 		B36C411F19DBF02E00F25768 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B36C411D19DBF02E00F25768 /* Main.storyboard */; };
 		B36C412119DBF02E00F25768 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B36C412019DBF02E00F25768 /* Images.xcassets */; };
@@ -31,6 +32,7 @@
 		B3DC2BF719DD6D410057072B /* DatabaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BF619DD6D410057072B /* DatabaseController.m */; };
 		B3DC2BFA19DD6ED10057072B /* SQLiteUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BF919DD6ED10057072B /* SQLiteUtils.m */; };
 		B3DC2BFE19DD791C0057072B /* ScanningBeaconsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3DC2BFD19DD791C0057072B /* ScanningBeaconsCell.swift */; };
+		B3FE883819EFE230008F672B /* json.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FE883719EFE230008F672B /* json.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B350C6D319E7FBD500EF9966 /* Ibeacon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ibeacon.swift; sourceTree = "<group>"; };
 		B36C411419DBF02E00F25768 /* iBeacons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iBeacons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B36C411819DBF02E00F25768 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B36C411919DBF02E00F25768 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.simpleColoring; };
@@ -75,6 +78,7 @@
 		B3DC2BF819DD6ED10057072B /* SQLiteUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteUtils.h; sourceTree = "<group>"; };
 		B3DC2BF919DD6ED10057072B /* SQLiteUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteUtils.m; sourceTree = "<group>"; };
 		B3DC2BFD19DD791C0057072B /* ScanningBeaconsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanningBeaconsCell.swift; sourceTree = "<group>"; };
+		B3FE883719EFE230008F672B /* json.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = json.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +129,7 @@
 				B3DC2BF619DD6D410057072B /* DatabaseController.m */,
 				B3DC2BF819DD6ED10057072B /* SQLiteUtils.h */,
 				B3DC2BF919DD6ED10057072B /* SQLiteUtils.m */,
+				B350C6D319E7FBD500EF9966 /* Ibeacon.swift */,
 				B36C411919DBF02E00F25768 /* AppDelegate.swift */,
 				B36C413919DBF0B300F25768 /* MainScreen.swift */,
 				B36C411D19DBF02E00F25768 /* Main.storyboard */,
@@ -132,6 +137,7 @@
 				B36C413B19DBF19600F25768 /* TestScan.swift */,
 				B3DC2BE119DC3E870057072B /* AddBeacon.swift */,
 				B3DC2BDB19DC35480057072B /* ListBeaconCell.swift */,
+				B3FE883719EFE230008F672B /* json.swift */,
 				B3DC2BDF19DC386C0057072B /* ListBeacons.swift */,
 				B3DC2BE519DC4A520057072B /* ScannedBeaconsCell.swift */,
 				B3DC2BE719DD39C00057072B /* ScannedBeacons.swift */,
@@ -286,6 +292,7 @@
 			files = (
 				B3DC2BE819DD39C00057072B /* ScannedBeacons.swift in Sources */,
 				B3DC2BE619DC4A520057072B /* ScannedBeaconsCell.swift in Sources */,
+				B3FE883819EFE230008F672B /* json.swift in Sources */,
 				B3DC2BF719DD6D410057072B /* DatabaseController.m in Sources */,
 				B3DC2BFE19DD791C0057072B /* ScanningBeaconsCell.swift in Sources */,
 				B3DC2BE219DC3E870057072B /* AddBeacon.swift in Sources */,
@@ -295,6 +302,7 @@
 				B3DC2BDC19DC35480057072B /* ListBeaconCell.swift in Sources */,
 				B36C413C19DBF19600F25768 /* TestScan.swift in Sources */,
 				B3DC2BFA19DD6ED10057072B /* SQLiteUtils.m in Sources */,
+				B350C6D419E7FBD500EF9966 /* Ibeacon.swift in Sources */,
 				B36C413E19DBFE8600F25768 /* TestScanCell.swift in Sources */,
 				B36C411A19DBF02E00F25768 /* AppDelegate.swift in Sources */,
 			);
@@ -423,7 +431,7 @@
 				INFOPLIST_FILE = iBeacons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a8b4d318-5704-4b97-83a3-666ee1a8e141";
+				PROVISIONING_PROFILE = "716d2182-f0fd-404d-bddc-73a5dc3cf3f7";
 				SWIFT_OBJC_BRIDGING_HEADER = "iBeacons-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -437,7 +445,7 @@
 				INFOPLIST_FILE = iBeacons/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "a8b4d318-5704-4b97-83a3-666ee1a8e141";
+				PROVISIONING_PROFILE = "716d2182-f0fd-404d-bddc-73a5dc3cf3f7";
 				SWIFT_OBJC_BRIDGING_HEADER = "iBeacons-Bridging-Header.h";
 			};
 			name = Release;
